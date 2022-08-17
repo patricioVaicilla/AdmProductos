@@ -34,7 +34,8 @@ const Main=() =>{
         <div>
             <ProductForm addtoDOM={addToDOM}/>
             <hr />
-            {loaded && <ProductList product = {product} removeFromDom={removeFromDom}/>}
+            <h1>All Products</h1>
+            {loaded  && <ProductList prod = {product} removeFromDom={removeFromDom}/>}
         </div>
 
     );

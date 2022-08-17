@@ -9,9 +9,9 @@ const Detail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/user/${id}`)
+        axios.get(`http://localhost:8000/api/product/${id}`)
             .then(res => {
-                setPerson({ ...res.data })
+                setPerson({ ...res.data });
                 console.log('respuesta', res.data)
             })
             .catch(err => console.log(err))
@@ -19,10 +19,11 @@ const Detail = () => {
     }, [id]);
     return (
         <div>
-            <p>UserName:  {person.userName}</p>
-            <p>Email:  {person.email}</p>
-            <Link to={"/people/" + person._id + "/edit"}>Edit</Link>
-            <button onClick={(e) => { navigate('/people') }}>Home</button>
+            <p>Title:  {person.title}</p>
+            <p>Price:  {person.price}</p>
+            <p>Description:  {person.description}</p>
+            <Link to={"/" + person._id + "/edit"}>Edit</Link>
+            <button onClick={(e) => { navigate('/') }}>Home</button>
 
 
         </div>

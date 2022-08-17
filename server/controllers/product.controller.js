@@ -17,17 +17,17 @@ module.exports.getAllProducts = (_, response) => {
         .catch(err => response.json(err))
 }
 module.exports.getProduct = (request, response) => {
-    User.findOne({ _id: request.params.id })
+    Product.findOne({ _id: request.params.id })
         .then(product => response.json(product))
         .catch(err => response.json(err))
 }
 module.exports.updateProduct = (request, response) => {
-    User.findOneAndUpdate({ _id: request.params.id }, request.body, { new: true })
+    Product.findOneAndUpdate({ _id: request.params.id }, request.body, { new: true })
         .then(updatedProduct => response.json(updatedProduct))
         .catch(err => response.json(err))
 }
 module.exports.deleteProduct = (request, response) => {
-    User.deleteOne({ _id: request.params.id })
+    Product.deleteOne({ _id: request.params.id })
         .then(productDeleted => response.json(productDeleted))
         .catch(err => response.json(err))
 }
