@@ -10,7 +10,7 @@ app.use(cors()); //esto es nuevo para solicitud de origen cruzado
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-const userRoutes=require('./server/routes/product.routes');
-userRoutes(app);
+const productRoutes=require('./server/routes/product.routes');
+productRoutes(app);
 
 app.listen(port,()=>console.log("Server is listening at port",port));

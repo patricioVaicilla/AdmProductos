@@ -2,7 +2,7 @@
 // const { request } = require('http');
 const Product = require('../models/product.model');
 
-module.exports.createUser = (request, response) => {
+module.exports.createProduct = (request, response) => {
     const { title, price, description } = request.body;
     Product.create({
         title, price, description
@@ -11,7 +11,7 @@ module.exports.createUser = (request, response) => {
         .catch(err => response.status(400).json(err));
 }
 
-module.exports.getAllProduct = (_, response) => {
+module.exports.getAllProducts = (_, response) => {
     Product.find({})
         .then(retriviedproducts => response.json(retriviedproducts))
         .catch(err => response.json(err))

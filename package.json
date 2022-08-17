@@ -1,20 +1,28 @@
 {
-  "name": "adm-productos",
+  "name": "admproductos",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patricioVaicilla/AdmProductos.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "mongoose": "^6.5.1",
-    "nodemon": "^2.0.19"
-  }
+  "bugs": {
+    "url": "https://github.com/patricioVaicilla/AdmProductos/issues"
+  },
+  "homepage": "https://github.com/patricioVaicilla/AdmProductos#readme"
 }
