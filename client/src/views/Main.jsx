@@ -18,14 +18,14 @@ const Main=() =>{
     useEffect(() => {
         axios.get('http://localhost:8000/api/products')
             .then(res => {
-                setPeople(res.data);
+                setProduct(res.data);
                 setLoaded(true);
             })
 
     }, []);
 
-     const removeFromDom = (userId) => {
-         setPeople(people.filter(person => person._id !== userId));
+     const removeFromDom = (productoId) => {
+         setProduct(product.filter(producto => producto._id !== productoId));
      }
      
 
@@ -34,7 +34,7 @@ const Main=() =>{
         <div>
             <ProductForm addtoDOM={addToDOM}/>
             <hr />
-            {loaded && <ProductList people = {people} removeFromDom={removeFromDom}/>}
+            {loaded && <ProductList product = {product} removeFromDom={removeFromDom}/>}
         </div>
 
     );
